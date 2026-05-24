@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты Cowworker — свяжитесь с нами">
+  <title>Контакты — Cowworker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar is-fixed-top is-white has-shadow" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold is-size-4" href="index.html">🏢 Cowworker</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Главная</a>
+          <a class="navbar-item is-active" href="contacts.html">Контакты</a>
+          <a class="navbar-item" href="faq.html">FAQ</a>
+          <a class="navbar-item button is-primary is-small ml-3">Войти</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section mt-6">
+    <div class="container">
+      <h1 class="title is-2 has-text-centered mb-5">Контакты</h1>
+      
+      <div class="columns is-centered">
+        <!-- Контактная информация -->
+        <div class="column is-4">
+          <div class="box">
+            <h2 class="title is-4">Наши контакты</h2>
+            <div class="content">
+              <p><i class="fas fa-map-marker-alt has-text-primary"></i> Москва, ул. Примерная, 12</p>
+              <p><i class="fas fa-phone has-text-primary"></i> +7 (967) 67-67-67</p>
+              <p><i class="fas fa-envelope has-text-primary"></i> support@coworkfind.ru</p>
+              <hr>
+              <p><strong>Мы в соцсетях:</strong></p>
+              <p>
+                <a href="#" class="button is-small is-light mr-2"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="button is-small is-light mr-2"><i class="fab fa-vk"></i></a>
+                <a href="#" class="button is-small is-light"><i class="fab fa-whatsapp"></i></a>
+              </p>
+              <hr>
+              <p><strong>Режим работы:</strong><br>
+              Пн-Пт: 9:00 - 21:00<br>
+              Сб-Вс: 10:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Форма обратной связи -->
+        <div class="column is-6">
+          <div class="box">
+            <h2 class="title is-4">Оставьте отзыв</h2>
+            <form id="feedbackForm">
+              <div class="field">
+                <label class="label">Имя <span class="has-text-danger">*</span></label>
+                <div class="control">
+                  <input class="input" type="text" id="fullname" placeholder="Ваше имя" required>
+                </div>
+                <p class="help" id="fullnameHelp">Введите фамилию и имя</p>
+              </div>
+
+              <div class="field">
+                <label class="label">Email <span class="has-text-danger">*</span></label>
+                <div class="control">
+                  <input class="input" type="email" id="email" placeholder="example@email.com" required>
+                </div>
+                <p class="help" id="emailHelp">Введите корректный email адрес</p>
+              </div>
+
+              <div class="field">
+                <label class="label">Тема <span class="has-text-danger">*</span></label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="subject" required>
+                      <option value="" disabled selected>Выберите тему</option>
+                      <option>Предложение</option>
+                      <option>Жалоба</option>
+                      <option>Вопрос</option>
+                      <option>Благодарность</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Сообщение</label>
+                <div class="control">
+                  <textarea class="textarea" id="message" placeholder="Ваше сообщение..." rows="5"></textarea>
+                </div>
+                <p class="help" id="messageHelp">До 500 символов</p>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox" id="agreement" required>
+                    Соглашаюсь на обработку персональных данных
+                  </label>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button type="submit" class="button is-primary">Отправить отзыв</button>
+                </div>
+                <div class="control">
+                  <button type="reset" class="button is-light">Очистить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container has-text-centered">
+      <p class="is-size-5 has-text-weight-bold">🏢 Cowworker © 2026</p>
+      <p class="mt-2">📧 support@coworkfind.ru &nbsp; 📞 +7(967)67-67-67</p>
+      <p class="mt-3">
+        <a href="#" class="button is-light is-small mr-2"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="#" class="button is-light is-small mr-2"><i class="fab fa-vk"></i> VK</a>
+        <a href="#" class="button is-light is-small"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </p>
+      <p class="is-size-7 has-text-grey mt-4">
+        <a href="faq.html">FAQ</a> • 
+        <a href="contacts.html">Контакты</a> • 
+        Политика конфиденциальности
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/consoleLogger.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

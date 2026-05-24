@@ -10,34 +10,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <!-- Font Awesome (иконки) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  
-  <style>
-    /* Минимальные правки для соответствия ПР7 */
-    html { scroll-behavior: smooth; }
-    .hero.is-primary { background: linear-gradient(135deg, #485fc7 0%, #7f9cf5 100%); }
-    details { cursor: pointer; }
-    details summary { color: #3298dc; font-weight: 500; user-select: none; }
-    details summary:hover { text-decoration: underline; }
-    .card-image img { object-fit: cover; height: 200px; }
-    .navbar-item.is-active { color: #485fc7; font-weight: 600; }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/custom.css">
 </head>
 <body>
 
-  <!-- 📌 БЛОК 1: HEADER (фиксированный) -->
+  <!-- 📌 HEADER (фиксированный) -->
   <nav class="navbar is-fixed-top is-white has-shadow" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-weight-bold is-size-4" href="index.html">🐄 Cowworker</a>
+        <a class="navbar-item has-text-weight-bold is-size-4" href="index.html">🏢 Cowworker</a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
           <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </a>
       </div>
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="#catalog">Каталог</a>
-          <a class="navbar-item" href="#faq">FAQ</a>
-          <a class="navbar-item" href="#contacts">Контакты</a>
+          <a class="navbar-item is-active" href="index.html">Главная</a>
+          <a class="navbar-item" href="contacts.html">Контакты</a>
+          <a class="navbar-item" href="faq.html">FAQ</a>
           <a class="navbar-item button is-primary is-small ml-3">🔑 Войти</a>
         </div>
       </div>
@@ -45,12 +36,12 @@
   </nav>
 
   <main>
-    <!-- 🎯 БЛОК 2: HERO + ПОИСК -->
+    <!-- 🎯 HERO + ПОИСК -->
     <section class="hero is-primary is-medium mt-6">
       <div class="hero-body has-text-centered">
         <div class="container">
-          <h1 class="title is-1 has-text-white">Найдите рабочее место</h1>
-          <p class="subtitle is-4 has-text-white-bis">Фильтры по метро, району и типу коворкинга</p>
+          <h1 class="title is-1 has-text-white">Найдите рабочее место за 1 клик</h1>
+          <p class="subtitle is-4 has-text-white-bis">Фильтры по метро, уровню шума и честной цене</p>
           
           <div class="box mt-5 has-text-left-desktop" style="max-width: 900px; margin: 2rem auto 0;">
             <div class="columns is-mobile is-multiline">
@@ -87,19 +78,18 @@
                 <div class="column is-6"><label class="checkbox"><input type="checkbox"> 🔒 Шкафчики</label></div>
                 <div class="column is-6"><label class="checkbox"><input type="checkbox"> 🐕 Pet-friendly</label></div>
                 <div class="column is-6"><label class="checkbox"><input type="checkbox"> ⭐ Рейтинг≥4.5</label></div>
-                <div class="column is-6"><label class="checkbox"><input type="checkbox"> ☕ Есть кафе</label></div>
               </div>
             </details>
 
             <div class="field has-text-centered mt-5">
-              <button class="button is-primary is-large is-rounded"> Найти место</button>
+              <button class="button is-primary is-large is-rounded">🔍 Найти место</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--  БЛОК 3: ПРЕИМУЩЕСТВА -->
+    <!-- ✨ ПРЕИМУЩЕСТВА -->
     <section class="section" id="features">
       <div class="container">
         <h2 class="title is-2 has-text-centered mb-5">Наши преимущества</h2>
@@ -135,7 +125,7 @@
       </div>
     </section>
 
-    <!-- ️ БЛОК 4: КАТАЛОГ (превью) -->
+    <!-- 🗺️ КАТАЛОГ -->
     <section class="section has-background-light" id="catalog">
       <div class="container">
         <h2 class="title is-2 has-text-centered mb-5">Популярные пространства</h2>
@@ -168,7 +158,7 @@
               <div class="card-image"><figure class="image is-16by9"><img src="https://placehold.co/600x400/e2e8f0/4a5568?text=QueueDesk" alt="QueueDesk"></figure></div>
               <div class="card-content">
                 <p class="title is-5">QueueDesk</p>
-                <p class="subtitle is-6 has-text-grey">м. Павелецкая • 600₽/ч 5.0</p>
+                <p class="subtitle is-6 has-text-grey">м. Павелецкая • 600₽/ч ⭐5.0</p>
                 <button class="button is-primary is-fullwidth is-small">Забронировать</button>
               </div>
             </div>
@@ -178,7 +168,7 @@
       </div>
     </section>
 
-    <!--  БЛОК 5: ФИНАЛЬНЫЙ CTA -->
+    <!-- 📢 ФИНАЛЬНЫЙ CTA -->
     <section class="section has-background-primary has-text-white has-text-centered">
       <div class="container">
         <h2 class="title is-2 has-text-white mb-4">Готовы работать продуктивно?</h2>
@@ -187,11 +177,11 @@
     </section>
   </main>
 
-  <!-- 🦶 БЛОК 6: FOOTER -->
+  <!-- 🦶 FOOTER -->
   <footer class="footer" id="contacts">
     <div class="container has-text-centered">
-      <p class="is-size-5 has-text-weight-bold">🐄 Cowworker © 2026</p>
-      <p class="mt-2">📧 support@cowworker.ru &nbsp; 📞 +7(967)67-67-67</p>
+      <p class="is-size-5 has-text-weight-bold">🏢 Cowworker © 2026</p>
+      <p class="mt-2">📧 support@coworkfind.ru &nbsp; 📞 +7(967)67-67-67</p>
       <p class="mt-3">
         <a href="#" class="button is-light is-small mr-2"><i class="fab fa-telegram"></i> Telegram</a>
         <a href="#" class="button is-light is-small mr-2"><i class="fab fa-vk"></i> VK</a>
@@ -201,19 +191,7 @@
     </div>
   </footer>
 
-  <!-- Скрипт для мобильного меню (требование Bulma) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
-      });
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
 </body>
 </html>
